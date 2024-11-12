@@ -1,5 +1,5 @@
 
-@import "../exceptions/exceptions";  // Import the exceptions partial
+@use "../exceptions/exceptions";  // Import the exceptions partial
 
 body {
   display: grid;
@@ -20,5 +20,5 @@ body {
 
 // Media query for larger screens
 @media (min-width: 40em) {
-  @include exception-styles;  // Use the exception styles mixin
+  @include exceptions.exception-styles;  // Use the exception styles mixin
 }
