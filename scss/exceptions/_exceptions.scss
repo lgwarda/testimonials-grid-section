@@ -1,10 +1,17 @@
-.grid-col-span-2 {
-    grid-column: span 2;
-  }
-  
-  .testimonial:last-child {
-    grid-column-start: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
+
+@mixin exception-styles {
+    .grid-col-span-2 {
+      grid-column: span 2;
+    }
+    
+    .testimonial-grid {
+      gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .testimonial:last-child {
+      grid-column-start: 4;
+      grid-row: 1 / span 2;
+    }
   }
   

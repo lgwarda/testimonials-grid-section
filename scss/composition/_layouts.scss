@@ -1,22 +1,24 @@
-body {
-    display: grid;
-    place-content: center;
-    min-height: 100vh;
-  
-    font-family: var(--ff-primary);
-    font-weight: var(--fw-400);
-  
-    background-color: hsl(var(--clr-neutral-200));
-  }
 
-  /* testimonial grid */
-    .testimonial-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(4, 1fr);
-  
-    padding-block: 2rem;
-    width: min(95%, 70rem);
-    margin-inline: auto;
-  }
-  
+@import "../exceptions/exceptions";  // Import the exceptions partial
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-400);
+  background-color: hsl(var(--clr-neutral-200));
+}
+
+.testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 2rem;
+  width: min(95%, 70rem);
+  margin-inline: auto;
+}
+
+// Media query for larger screens
+@media (min-width: 40em) {
+  @include exception-styles;  // Use the exception styles mixin
+}
